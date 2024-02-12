@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .app {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #4caf50;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .main {
+    text-align: center;
+    padding: 60px;
+  }
+  
+  form {
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 150px;
+  }
+  
+  select, input {
+    padding: 12px;
+    width : 200;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    margin-left: 10px;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .prediction-result {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-radius: 4px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
