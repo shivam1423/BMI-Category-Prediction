@@ -19,4 +19,7 @@ Now run,
 ```bash
 Python app.py
 ```
-
+Now the flask webapp will run in your localhost(run the below url in your browser),
+```bash
+http://127.0.0.1:5000
+```
