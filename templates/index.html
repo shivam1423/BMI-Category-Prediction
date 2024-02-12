@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>ML Web App</title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>BMI Category Prediction</h1>
+        </header>
+
+        <main class="main">
+            <form id="prediction-form" method="POST" action="/predict">
+                <label for="gender">Gender:</label>
+				<select name="gender" id="gender">
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				  </select><br>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value=27 required><br>
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" name="occupation" value="Software Engineer"  required><br>
+                <label for="sleep duration">Sleep Duration (hours):</label>
+                <input type="number" id="sleep duration" name="sleep duration" value=6 required><br>
+                <label for="quality of sleep">Quality of Sleep:</label>
+                <input type="number" id="quality of sleep" name="quality of sleep" value=6 required><br>
+                <label for="physical activity level">Physical Activity Level:</label>
+                <input type="number" id="physical activity level" name="physical activity level" value=42 required><br>
+                <label for="stress level">Stress Level (0-10):</label>
+                <input type="number" id="stress level" name="stress level" value="6" required><br>
+                <label for="blood pressure">Blood Pressure:</label>
+                <input type="text" id="blood pressure" name="blood pressure" value="126/83" required><br>
+                <label for="heart rate">Heart Rate (beats per minute):</label>
+                <input type="number" id="heart rate" name="heart rate" value="77" required><br>
+                <label for="daily steps">Daily Steps:</label>
+                <input type="number" id="daily steps" name="daily steps" value="4200" required><br>
+                <label for="sleep disorder">sleep disorder:</label>
+                <input type="text" id="sleep disorder" name="sleep disorder" value="None" required><br>
+
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div class="prediction-result">
+                {% if prediction %}
+                <h2>Prediction Result: {{ prediction }}</h2>
+                
+                <h2>Important Feature is {{feature_importances}}</h2>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+
+    
+</body>
+</html>
+
+
